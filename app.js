@@ -9,10 +9,11 @@ const router = express.Router();
 app.set("view engine", "ejs");
 
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.static("public"));
 
 app.get("/", function (req, res) {
   let today = new Date();
-  let day = today.getDay();
+  // let day = today.getDay();
   let options =
   {
     weekday:"long",//entire day of that week

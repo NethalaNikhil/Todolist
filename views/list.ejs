@@ -6,10 +6,16 @@
     <title>Todolist-v1</title>
 </head>
 <body>
-    <% if (Day === "sunday" || Day === "saturday") { %>
-        <h1 style="color: aqua;"><%= Day %></h1>
-    <% } else { %>
-        <h1 style="color: palevioletred;"><%= Day %>!</h1>
-    <% } %>
+   <h1 style="color: rgb(255, 127, 127);"><%= Day %></h1>
+   <ul>
+    <%for (var i=0 ;i<newListItems.length;i++){%>
+        <li style="color: black;"><%= newListItems[i] %></li>
+    <%}%>
+   </ul>
+<!-- post request -->
+<form action="/" method="post">
+    <input type="text" name ="newItems">
+    <button type="submit" name="button">Add</button>
+</form>
 </body>
 </html>
